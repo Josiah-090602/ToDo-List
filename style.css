@@ -17,7 +17,7 @@
     --white:#F7F7F7;
     --transition600: ease-in-out 600ms;
     --transition900: ease-in-out 900ms;
-    --transition300: ease-in-out 300ms;
+    --transition200: ease-in-out 200ms;
 }
 
 body{
@@ -157,8 +157,12 @@ h2 {
     font-weight: 700;
     margin-bottom: 10px;
     position: relative;
-    transition: var(--transition300);
+    transition: var(--transition200);
     cursor: pointer;
+}
+
+.tasks-items li:hover{
+        background-color: rgb(245, 247, 248, 0.8);
 }
 
 
@@ -191,9 +195,6 @@ h2 {
     background-color: rgb(244, 132, 132, .4);
 }
 
-.completer{
-
-}
 
 
 
