@@ -37,14 +37,40 @@ main{
     flex-direction: column;
     height: auto;
     padding: 30px;
-    width: 35%;
-    background-color: var(--ligher-gray);
+    width: 40rem;
+    background-color: var(--light-gray);
     border-radius: 30px;
     gap: 20px;
+    position: relative;
 }
 
 h2 {
-    color: var(--light-gray);
+    color: var(--white);
+}
+
+.circles{
+    width: auto;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 30px;
+}
+
+.circles > div{
+    height: 12px;
+    width: 12px;
+    border-radius: 10px; 
+    
+}
+
+.circle-red{
+    background-color: var(--red);
+}
+.circle-green{
+    background-color: var(--green);
+}
+.circle-gray{
+    background-color: var(--ligher-gray) !important;
 }
 
 .date-priority, .task-note{
@@ -52,6 +78,10 @@ h2 {
     width: 100%;
     gap: 10px;
     margin-bottom: 10px;
+}
+
+.task-note{
+    margin-bottom: 30px;
 }
 
 .data-input{
@@ -78,6 +108,38 @@ h2 {
     background-color: var(--green);
     cursor: pointer;
 
+}
+
+.tasks-items{
+    border-top: 2px solid var(--ligher-gray);
+    list-style: none;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+    position: relative;
+}
+
+
+.tasks-items::before{
+    content: 'Tasks';
+    position: absolute;
+    top: -11px;
+    color: var(--white);
+    background-color: var(--light-gray);
+    width: 4rem;
+    text-align: center;
+    left: 15px;
+}
+
+
+.tasks-items li{
+    list-style: none;
+    height: 4rem;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 
