@@ -15,6 +15,9 @@
     --yellow: #FFBD44;
     --green: rgb(0, 202, 78);
     --white:#F7F7F7;
+    --transition600: ease-in-out 600ms;
+    --transition900: ease-in-out 900ms;
+    --transition300: ease-in-out 300ms;
 }
 
 body{
@@ -123,7 +126,7 @@ h2 {
     gap: 10px !important;
     padding-top: 30px;
     max-height: 20rem;
-    transition: ease-in-out 1s !important;
+    transition: var(--transition600);
     overflow-y: scroll;
     padding: 15px 10px;
     scroll-behavior: smooth;
@@ -154,6 +157,8 @@ h2 {
     font-weight: 700;
     margin-bottom: 10px;
     position: relative;
+    transition: var(--transition300);
+    cursor: pointer;
 }
 
 
@@ -183,7 +188,11 @@ h2 {
 }
 
 .tasks-items li img:hover {
-    background-color: rgb(130, 130, 130, 0.3);
+    background-color: rgb(244, 132, 132, .4);
+}
+
+.completer{
+
 }
 
 

@@ -17,9 +17,9 @@ addTask.addEventListener("click", () => {
         let listTask = document.createElement("li")
         listTask.textContent = taskNote.value
         tasksItem.appendChild(listTask)
-        tasksTitle.style.display = "flex"
         addDate(listTask)
         resetInputs()
+        saveTasks();
     }
     
 })
@@ -37,8 +37,10 @@ const resetInputs = () =>{
 tasksItem.addEventListener("click", (clicked) => {
     if (clicked.target.tagName === "LI") {
         clicked.target.style.backgroundColor = "#C1F2B0"
+        saveTasks()
     } else if (clicked.target.tagName === "IMG") {
         clicked.target.parentElement.remove()
+        saveTasks()
     }
 })
 
@@ -65,8 +67,19 @@ const addDate = (addedList) => {
         addedList.appendChild(deleteIcon)
 }
 
+//save to local storage
+const saveTasks = () =>{
+        localStorage.setItem("task", tasksItem.innerHTML)
+}
+
+//show local Storage
+const showSaveTasks = () => {
+        tasksItem.innerHTML =  localStorage.getItem("task")
+}
+
 
 //Onload
+
 window.onload = () => {
-    tasksTitle.style.display = "none"
+    showSaveTasks();
 }
