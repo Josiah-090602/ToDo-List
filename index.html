@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="/style.css">
+
+    <script defer src="/script.js"></script>
 </head>
 <body>
     
@@ -22,7 +24,7 @@
             <div class="date-priority">
             <input type="date" name="" id="taskDate" class="data-input date">
             <select name="" id="taskPriority" class="data-input priority">
-                <option value="high">Select Priority</option>
+                <option value="">Select Priority</option>
                 <option value="high">High</option>
                 <option value="medium">Medium</option>
                 <option value="low">Low</option>
@@ -35,9 +37,7 @@
             </div>
 
             <div class="tasks-con">
-                <ul class="tasks-items">
-                    <li>Hello</li>
-                
+                <ul class="tasks-items" id="task-items">
                 </ul>
             </div>
 
