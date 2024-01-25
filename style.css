@@ -105,8 +105,13 @@ h2 {
     width: 25%;
     border-radius: 10px;
     border: none;
-    background-color: var(--green);
+    background-color: #b5efa1;
     cursor: pointer;
+    transition: var(--transition200);
+}
+
+#addTask:hover{
+    background-color: rgba(144, 218, 119, 0.9);
 
 }
 
